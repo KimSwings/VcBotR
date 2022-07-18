@@ -7,7 +7,7 @@ from pyrogram.types import Chat
 from pyrogram.types import Message
 from pyrogram.errors import UserAlreadyParticipant
 
-from Userbot.services.callsmusic.callsmusic import client as USER
+#from Userbot.services.callsmusic.callsmusic import client as USER
 from Userbot.config import SUDO_USERS
 
 @Client.on_message(filters.command(["broadcast", "b"]))
