@@ -12,7 +12,7 @@ from pyrogram import Client as pbot
 # Lel, Didn't Get Time To Make New One So Used Plugin Made br @mrconfused and @sandy1709 dont edit credits
 
 
-@Client.on_message(filters.command(["play"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["play"]))
 async def _(client, message):
     lel = await message.reply("Searching For Lyrics...")
     query = message.text
