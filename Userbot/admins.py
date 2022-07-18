@@ -8,7 +8,6 @@ from Userbot.helpers.queues import QUEUE, clear_queue
 
 
 @Client.on_message(filters.command(["skip", "s"], prefixes=f"{HNDLR}"))
-
 async def skip(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -20,7 +19,7 @@ async def skip(client, m: Message):
             await m.reply("Empty Queue, Leaving Voice Chat**")
         else:
             await m.reply(
-                f"**⏭ Skip playback** \n**🎧 Now play** - [{op[0]}]({op[1]}) | `{op[2]}`",
+                f"**⏭ Skipped Ek Song To Chlne Do Kids** \n**🎧 Now play** - [{op[0]}]({op[1]}) | `{op[2]}`",
                 disable_web_page_preview=True,
             )
     else:
@@ -42,7 +41,6 @@ async def skip(client, m: Message):
 
 
 @Client.on_message(filters.command(["end", "stop"], prefixes=f"{HNDLR}"))
-
 async def stop(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -58,7 +56,6 @@ async def stop(client, m: Message):
 
 
 @Client.on_message(filters.command(["pause"], prefixes=f"{HNDLR}"))
-
 async def pause(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -75,7 +72,6 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(filters.command(["resume"], prefixes=f"{HNDLR}"))
-
 async def resume(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
