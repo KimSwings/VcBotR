@@ -11,7 +11,7 @@ async def download_song(url):
     song.name = "a.mp3"
     return song
 is_downloading = False
-@Mbot.on_message(filters.command("saavn") & ~filters.edited)
+@Client.on_message(filters.command(["saavn]))
 async def jssong(_, message):
     global is_downloading
     if len(message.command) < 2:
