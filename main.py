@@ -11,7 +11,7 @@ async def main():
     print(
         """
     ------------------
-   | Userbot Started! POWERED BY @TeamOctave |
+   | Userbot Started! True King PLUNDERER |
     ------------------
 """
     )
