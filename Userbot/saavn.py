@@ -3,7 +3,6 @@ from pyrogram import filters
 from requests import get
 from io import BytesIO
 from mbot import aiohttpsession as session
-from mbot import mbot.utils
 
 async def download_song(url):
     async with session.get(url) as resp:
