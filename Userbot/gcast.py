@@ -10,7 +10,7 @@ from pyrogram.errors import UserAlreadyParticipant
 #from Userbot.services.callsmusic.callsmusic import client as USER
 #from Userbot.config import SUDO_USERS
 
-@Client.on_message(filters.command(["broadcast", "b"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["broadcast", "b"]))
 async def broadcast(_, message: Message):
     sent=0
     failed=0
