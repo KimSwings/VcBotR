@@ -65,8 +65,8 @@ class QuotesMod(loader.Module):
 	async def client_ready(self, client, db):
 		self.client = message.client
 
-	@loader.unrestricted
-	@loader.ratelimit
+	#@loader.unrestricted
+	#@loader.ratelimit
 	async def quotescmd(self, message):
 		args = utils.get_args(message)
 		reply = await message.get_reply_message()
