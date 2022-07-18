@@ -15,7 +15,7 @@ async def main():
     ------------------
 """
     )
-    await call_py.join_chat(GROUP_ID)
+   #await call_py.join_chat(GROUP_ID)
    #await call_py.send_message(GROUP_ID)
     await idle()
     await arq.close()
