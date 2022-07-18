@@ -34,7 +34,7 @@ from telethon.tl.types import (MessageEntityBold, MessageEntityItalic,
 logger = logging.getLogger(__name__)
 
 
-@loader.tds
+#@loader.tds
 class QuotesMod(loader.Module):
 	"""Quote a message"""
 	strings = {
