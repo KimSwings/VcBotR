@@ -377,7 +377,7 @@ async def playfrom(client, m: Message):
             await hmm.edit(f"**ERROR** \n`{e}`")
 
 
-@Client.on_message(filters.command(["playlist", "queue". "list"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["playlist", "queue", "list"], prefixes=f"{HNDLR}"))
 async def playlist(client, m: Message):
     chat_id = m.chat.id
     if chat_id in QUEUE:
