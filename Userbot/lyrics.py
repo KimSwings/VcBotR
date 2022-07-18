@@ -25,7 +25,6 @@ async def _(client, message):
     if song:
         if song.lyrics:
             reply = song.format()
-            )
         else:
             reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try `.glyrics`"
     else:
