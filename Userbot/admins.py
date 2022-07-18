@@ -7,8 +7,8 @@ from Userbot.helpers.handlers import skip_current_song, skip_item
 from Userbot.helpers.queues import QUEUE, clear_queue
 
 
-@Client.on_message(filters.command(["skip"], prefixes=f"{HNDLR}"))
-@authorized_users_only
+@Client.on_message(filters.command(["skip", "s"], prefixes=f"{HNDLR}"))
+
 async def skip(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -42,7 +42,7 @@ async def skip(client, m: Message):
 
 
 @Client.on_message(filters.command(["end", "stop"], prefixes=f"{HNDLR}"))
-@authorized_users_only
+
 async def stop(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -58,7 +58,7 @@ async def stop(client, m: Message):
 
 
 @Client.on_message(filters.command(["pause"], prefixes=f"{HNDLR}"))
-@authorized_users_only
+
 async def pause(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -75,7 +75,7 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(filters.command(["resume"], prefixes=f"{HNDLR}"))
-@authorized_users_only
+
 async def resume(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
