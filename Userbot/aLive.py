@@ -69,7 +69,7 @@ async def goodmorning(client, m: Message):
     await m.reply(GM)
 
 
-@Client.on_message(filters.command(["Good Evening", "Gud evng", "gud evening", "ge", "evening"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["Good Evening", "e", "eve", "ge", "evening"], prefixes=f"{HNDLR}"))
 async def goodevening(client, m: Message):
     GE = f"""
 <i> 😁Good Evening...Unkil n Kids☕️</i>
