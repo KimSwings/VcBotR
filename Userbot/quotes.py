@@ -19,7 +19,7 @@
 # requires: Pillow
 
 import logging
-from .. import loader, utils
+#from .. import loader, utils
 import telethon
 import requests, io, PIL
 from telethon.tl.types import (MessageEntityBold, MessageEntityItalic,
