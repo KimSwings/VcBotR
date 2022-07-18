@@ -19,7 +19,7 @@ async def _(client, message):
     if not query:
         await lel.edit("`What I am Supposed to find `")
         return
-
+        )
     song = ""
     song = Song.find_song(query)
     if song:
