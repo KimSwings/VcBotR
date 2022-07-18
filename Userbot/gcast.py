@@ -7,8 +7,8 @@ from pyrogram.types import Chat
 from pyrogram.types import Message
 from pyrogram.errors import UserAlreadyParticipant
 
-from VCsMusicBot.services.callsmusic.callsmusic import client as USER
-from VCsMusicBot.config import SUDO_USERS
+from Userbot.services.callsmusic.callsmusic import client as USER
+from Userbot.config import SUDO_USERS
 
 @Client.on_message(filters.command(["broadcast", "b"]))
 async def broadcast(_, message: Message):
