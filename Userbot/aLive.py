@@ -29,7 +29,7 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@Client.on_message(filters.command(["king"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["king", "k"], prefixes=f"{HNDLR}"))
 async def ping(client, m: Message):
     start = time()
     current_time = datetime.utcnow()
@@ -43,7 +43,7 @@ async def ping(client, m: Message):
 
 
 @Client.on_message(
-    filters.user(SUDO_USERS) & filters.command(["restart"], prefixes=f"{HNDLR}")
+    filters.user(SUDO_USERS) & filters.command(["restart", ".rstart"], prefixes=f"{HNDLR}")
 )
 async def restart(client, m: Message):
     await m.delete()
