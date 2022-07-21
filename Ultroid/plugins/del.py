@@ -23,7 +23,8 @@ from . import (
 
 
 @ultroid_cmd(
-    pattern="del$",
+    pattern="del( (.*)|$)",
+    admins_only=True,
 )
 async def delete_it(delme):
     msg_src = await delme.get_reply_message()
