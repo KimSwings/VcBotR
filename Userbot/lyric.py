@@ -18,19 +18,3 @@ m = re.search(r'iComment-text">([^=]+)', x.text)
 res = m[0].replace('<br />', '')
 song = re.search(r'>([^<]+)', res) 
 print(song[0])
-
-
-    if len(reply) > 4095:
-        with io.BytesIO(str.encode(reply)) as out_file:
-            out_file.name = "lyrics.text"
-            await client.send_document(
-                message.chat.id,
-                out_file,
-                force_document=True,
-                allow_cache=False,
-                caption=query,
-                reply_to_msg_id=message.message_id,
-            )
-            await lel.delete()
-    else:
-        await lel.edit(reply)  # edit or reply
