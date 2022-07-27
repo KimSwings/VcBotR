@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from config import HNDLR, bot
 import re
 import requests
+from PyLyrics import PyLyrics
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=""&submit=Search')
 k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 
