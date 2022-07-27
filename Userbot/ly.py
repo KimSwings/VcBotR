@@ -8,10 +8,10 @@ k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 #x = requests.get(f'http://www.songlyrics.com/{k[1]}')
 async def _(client, message):
 
- m = re.search(r'iComment-text">([^=]+)', 'x.text')
+#m = re.search(r'iComment-text">([^=]+)', 'x.text')
 #res = m[0].replace('<br />', '')
-song = re.search(r'>([^<]+)', res) 
-print(song[0])
+#song = re.search(r'>([^<]+)', res) 
+#print(song[0])
 
 @Client.on_message(filters.command(["lyrics", "l"], prefixes=f"{HNDLR}"))
 async def _(client, message):
