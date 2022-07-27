@@ -7,7 +7,7 @@ r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=""&
 k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 
 #x = requests.get(f'http://www.songlyrics.com/{k[1]}')
-m = re.search(r'iComment-text">([^=]+)', x.text)
+m = re.search(r'iComment-text">([^=]+)', '[x.text]')
 res = m[0].replace('<br />', '')
 song = re.search(r'>([^<]+)', res) 
 
