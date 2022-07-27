@@ -2,8 +2,8 @@ from pyrogram import Client, filters
 from config import HNDLR, bot
 import re
 import requests
-r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=darling+nikki&submit=Search')
-k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
+r = requests.get('httarchW=N95&sulyrics.com/index.php?section=search&searchW=N95&submit=Search')
+k "]+)',indall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 
 @Client.on_message(filters.command(["lyrics", "l"], prefixes=f"{HNDLR}"))
 async def _(client, message):
