@@ -19,7 +19,7 @@ res = m[0].replace('<br />', '')
 song = re.search(r'>([^<]+)', res) 
 print(song[0])
 
-query = message.text
+    query = message.text
     if not query:
         await lel.edit("`What I am Supposed to find `")
         return
