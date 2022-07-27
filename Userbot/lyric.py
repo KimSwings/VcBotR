@@ -12,13 +12,14 @@ from pyrogram import Client as pbot
 @pbot.on_message(filters.command(["lyric", "lyrics"]))
 async def _(client, message):
     lel = await message.reply("Searching For Lyrics...")
-    query = message.text
+    
     x = requests.get(f'http://www.songlyrics.com/{k[1]}')
 m = re.search(r'iComment-text">([^=]+)', x.text)
 res = m[0].replace('<br />', '')
 song = re.search(r'>([^<]+)', res) 
 print(song[0])
 
+query = message.text
     if not query:
         await lel.edit("`What I am Supposed to find `")
         return
