@@ -1,7 +1,6 @@
-from pyrogram import Client, filters
+from pyrogram import Client, filters, res
 from config import HNDLR, bot
 import re
-import res
 import requests
 from PyLyrics import PyLyrics
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=""&submit=Search')
@@ -9,7 +8,7 @@ k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 
 #x = requests.get(f'http://www.songlyrics.com/{k[1]}')
 m = re.search(r'iComment-text">([^=]+)', '[x.text]')
-#res = m[0].replace('<br, "/">', '')
+res = m[0].replace('<br, />', '')
 song = re.search(r'>([^<]+)', res) 
 
 @Client.on_message(filters.command(["lyrics", "l"], prefixes=f"{HNDLR}"))
