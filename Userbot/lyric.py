@@ -19,16 +19,6 @@ res = m[0].replace('<br />', '')
 song = re.search(r'>([^<]+)', res) 
 print(song[0])
 
-        
-    song = ""
-    song = Song.find_song(query)
-    if song:
-        if song.lyrics:
-            reply = song.format()
-        else:
-            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try fumking off`"
-    else:
-        reply = "lyrics not found! try with artist name along with song if still doesnt work try just fumk off"
 
     if len(reply) > 4095:
         with io.BytesIO(str.encode(reply)) as out_file:
