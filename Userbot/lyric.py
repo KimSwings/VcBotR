@@ -3,6 +3,13 @@ import requests
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=darling+nikki&submit=Search')
 k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 
+@Client.on_message(filters.command(["lyrics", "l"], prefixes=f"{HNDLR}"))
+async def _(client, message):
+    lel = await message.reply("Searching For Lyrics...")
+    query = message.text
+    if not query:
+        await lel.edit("`What I am Supposed to find `")
+        return
 x = requests.get(f'http://www.songlyrics.com/{k[1]}')
 m = re.search(r'iComment-text">([^=]+)', x.text)
 res = m[0].replace('<br />', '')
