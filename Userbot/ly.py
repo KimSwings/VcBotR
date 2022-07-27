@@ -1,5 +1,3 @@
-s (15 sloc)  663 Bytes
-
 from pyrogram import Client, filters
 from config import HNDLR, bot
 import re
