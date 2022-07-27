@@ -1,6 +1,7 @@
 from pyrogram import Client, filters
 from config import HNDLR, bot
 import re
+import res
 import requests
 from PyLyrics import PyLyrics
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=""&submit=Search')
