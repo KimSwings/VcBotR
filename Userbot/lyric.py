@@ -5,7 +5,7 @@ r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=dar
 k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 
 from pyrogram import Client as pbot
-@pbot.on_message(filters.command(["lyric", "lyrics"]))
+@Client.on_message(filters.command(["lyrics", "l"], prefixes=f"{HNDLR}"))
 async def _(client, message):
     lel = await message.reply("Searching For Lyrics...")
     
