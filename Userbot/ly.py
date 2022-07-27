@@ -5,7 +5,7 @@ import requests
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=N95&submit=Search')
 k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 
-x = requests.get(f'http://www.songlyrics.com/{k[1]}')
+ x = requests.get(f'http://www.songlyrics.com/{k[1]}')
 async def _(client, message):
 
  m = re.search(r'iComment-text">([^=]+)', 'x.text')
