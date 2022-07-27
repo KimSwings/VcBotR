@@ -1,3 +1,4 @@
+from pyrogram import Client, filters
 import re
 import requests
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=darling+nikki&submit=Search')
