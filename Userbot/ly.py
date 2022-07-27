@@ -5,6 +5,12 @@ import requests
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=N95&submit=Search')
 k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 
+x = requests.get(f'http://www.songlyrics.com/{k[1]}')
+m = re.search(r'iComment-text">([^=]+)', x.text)
+res = m[0].replace('<br />', '')
+song = re.search(r'>([^<]+)', res) 
+print(song[0])
+
 @Client.on_message(filters.command(["lyrics", "l"], prefixes=f"{HNDLR}"))
 async def _(client, message):
     lel = await message.reply("Searching For Lyrics...")
@@ -36,11 +42,4 @@ async def _(client, message):
             )
             await lel.delete()
     else:
-        await lel.edit(reply)  # edit or reply
-
-    
-x = requests.get(f'http://www.songlyrics.com/{k[1]}')
-m = re.search(r'iComment-text">([^=]+)', x.text)
-res = m[0].replace('<br />', '')
-song = re.search(r'>([^<]+)', res) 
-print(song[0]) 
+        await lel.edit(reply)  # edit or reply 
