@@ -1,4 +1,5 @@
 from pyrogram import Client, filters
+from config import HNDLR, bot
 import re
 import requests
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=darling+nikki&submit=Search')
