@@ -9,7 +9,7 @@ k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 async def _(client, message):
     lel = await message.reply("Searching For Lyrics...")
     
-x = requests.get(f'http:/ent-.son">([^=]+)',/{k[1]}')
+x = requests.get(f'http://www.songlyrics.com/{k[1]}')
 m = re.search(r'iComment-text">([^=]+)', x.text)
 res = m[0].replace('<br />', '')
 song = re.search(r'>([^<]+)', res) 
