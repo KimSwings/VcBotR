@@ -3,7 +3,7 @@ import requests
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=darling+nikki&submit=Search')
 k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
 
-@Client.on_message(filters.command(["lyrics", "l"], prefixes=f"{HNDLR}"))
+@pbot.on_message(filters.command(["lyric", "lyrics"]))
 async def _(client, message):
     lel = await message.reply("Searching For Lyrics...")
     query = message.text
