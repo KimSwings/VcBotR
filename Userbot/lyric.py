@@ -2,11 +2,6 @@ import re
 import requests
 r = requests.get('http://www.songlyrics.com/index.php?section=search&searchW=darling+nikki&submit=Search')
 k = re.findall(r'href="http://www.songlyrics.com/([^"]+)', r.text)
-import io
-import os
-
-from pyrogram import filters
-from tswift import Song
 
 from pyrogram import Client as pbot
 @pbot.on_message(filters.command(["lyric", "lyrics"]))
