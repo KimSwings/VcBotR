@@ -13,6 +13,12 @@ from pyrogram import Client as pbot
 async def _(client, message):
     lel = await message.reply("Searching For Lyrics...")
     query = message.text
+    x = requests.get(f'http://www.songlyrics.com/{k[1]}')
+m = re.search(r'iComment-text">([^=]+)', x.text)
+res = m[0].replace('<br />', '')
+song = re.search(r'>([^<]+)', res) 
+print(song[0])
+
     if not query:
         await lel.edit("`What I am Supposed to find `")
         return
@@ -23,9 +29,9 @@ async def _(client, message):
         if song.lyrics:
             reply = song.format()
         else:
-            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try `.glyrics`"
+            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try fumking off`"
     else:
-        reply = "lyrics not found! try with artist name along with song if still doesnt work try `.glyrics`"
+        reply = "lyrics not found! try with artist name along with song if still doesnt work try just fumk off"
 
     if len(reply) > 4095:
         with io.BytesIO(str.encode(reply)) as out_file:
@@ -41,8 +47,3 @@ async def _(client, message):
             await lel.delete()
     else:
         await lel.edit(reply)  # edit or reply
-x = requests.get(f'http://www.songlyrics.com/{k[1]}')
-m = re.search(r'iComment-text">([^=]+)', x.text)
-res = m[0].replace('<br />', '')
-song = re.search(r'>([^<]+)', res) 
-print(song[0])
