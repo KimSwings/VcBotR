@@ -4,8 +4,7 @@ from pytgcalls import idle
 
 from config import call_py
 from Userbot.quote import arq
-from ..func import http
-from telethon import events
+
 
 async def main():
     await call_py.start()
