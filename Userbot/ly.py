@@ -19,7 +19,6 @@ query = message.text
 if not query:
  await lel.edit("`What I am Supposed to find `")
 return
-)
 
 
    
