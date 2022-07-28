@@ -3,7 +3,6 @@ import re
 from .func import http
 from telethon import events
 from ubb import Ubot
-from Userbot import http
 
 @Ubot.on(events.NewMessage(pattern=r'\.lyrics'))
 async def songlyric(event):
