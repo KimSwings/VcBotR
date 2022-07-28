@@ -3,8 +3,9 @@ import re
 from ..func import http
 from telethon import events
 from ubb import Ubot
+from pyrogram import Client, filters
 
-@Ubot.on(events.NewMessage(pattern=r'\.lyrics'))
+@Client.on_message(filters.command(["lyrics", "l"], prefixes=f"{HNDLR}"))
 async def songlyric(event):
     query = event.message.message[len('.lyrics '):]
     Query = query.replace(' ', '+')
