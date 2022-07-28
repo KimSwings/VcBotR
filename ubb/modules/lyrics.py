@@ -1,6 +1,6 @@
 import re
 
-from func import http
+from ..func import http
 from telethon import events
 from ubb import Ubot
 
