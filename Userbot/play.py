@@ -72,7 +72,7 @@ async def ytdl(link):
         "-g",
         "-f",
         # CHANGE THIS BASED ON WHAT YOU WANT
-        "best[height<=?720][width<=?1280]",
+        "medium[height<=?720][width<=?1280]",
         f"{link}",
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
@@ -207,15 +207,15 @@ async def vplay(client, m: Message):
             dl = await replied.download()
             link = replied.link
             if len(m.command) < 2:
-                Q = 720
+                Q = 360
             else:
                 pq = m.text.split(None, 1)[1]
                 if pq == "720" or "480" or "360":
                     Q = int(pq)
                 else:
-                    Q = 720
+                    Q = 360
                     await huehue.edit(
-                        "Only 720, 480, 360 ` Allowed \n`Now Stream in 720p`"
+                        "Only 720, 480, 360 ` Allowed \n`Now Stream in 360p`"
                     )
 
             if replied.video:
@@ -272,7 +272,7 @@ async def vplay(client, m: Message):
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
-            hmmm = HighQualityVideo()
+            hmmm = MediumQualityVideo()
             if search == 0:
                 await huehue.edit(
                     "**Found Nothing for Given Query**"
